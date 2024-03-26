@@ -68,6 +68,10 @@ int exactly3Divisors(int n) {
     }
     return res;
 }
+double termOfGP(int a,int b,int n){
+    double r=(double)b/a;
+    return a*pow(r,n-1);
+}
 int main() {
     // int a, b, c;
     // cout << "enter the value of a: ";
