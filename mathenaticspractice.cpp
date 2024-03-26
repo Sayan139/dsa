@@ -72,6 +72,39 @@ double termOfGP(int a,int b,int n){
     double r=(double)b/a;
     return a*pow(r,n-1);
 }
+long long sumUnderModulo(long long a,long long b){
+    // code here
+    long long mod=1000000007;
+    long long res=((a%mod)+(b%mod))%mod;
+    return res;
+}
+int multiplicationUnderModulo(long long a,long long b){
+    long long mod=1000000007;
+    long long c=((a%mod)*(b%mod))%mod;
+    return c;
+}
+int gcd(int a,int m){
+        if(m==0){
+            return a;
+        }
+        else{
+            return gcd(m,a%m);
+        }
+    }
+    int modInverse(int a, int m)
+    {
+        //Your code here
+        if(gcd(a,m)==1){
+            for(int i=1; i<m; i++){
+                if((a*i)%m==1){
+                    return i;
+                }
+            }
+        }
+        {
+            return -1;
+        }
+    }
 int main() {
     // int a, b, c;
     // cout << "enter the value of a: ";
